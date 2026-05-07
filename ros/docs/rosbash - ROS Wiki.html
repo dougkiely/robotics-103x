@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="rosbash%20-%20ROS%20Wiki_files/bootstrap.css">
+<script type="text/javascript" async="" src="rosbash%20-%20ROS%20Wiki_files/ga.js"></script><script src="rosbash%20-%20ROS%20Wiki_files/jquery-1.js"></script>
+<script src="rosbash%20-%20ROS%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/sorttable.js"></script>
+<script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/jquery.js"></script>                         
+<script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/seesaw.js"></script> 
+<script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index,nofollow">
+
+<title>rosbash - ROS Wiki</title>
+<script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="rosbash%20-%20ROS%20Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="rosbash%20-%20ROS%20Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="rosbash%20-%20ROS%20Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="rosbash%20-%20ROS%20Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/rosbash">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/rosbash?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/rosbash?action=print">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="en">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="rosbash%20-%20ROS%20Wiki_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+  
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable the alert box uncomment the block below. Change the alert_box_name to a new name. Then update the content below the button. -->
+<!-- Disabling alert box-->
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_lunar_teeshirt'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+ROS Lunar Loggerhead Tshirts and Hoodies are available worldwide! You can order from fulfillment centers in the <a href="https://teespring.com/ros-lunar-loggerhead">US</a> or <a href="https://teespring.com/ros-lunar-loggerhead-eu">Europe</a>.
+<br>
+Ordering closes May 9th!  And there are <a href="https://www.stickermule.com/user/1070828488/stickers">stickers too.</a>
+    </div>
+<!-- End disabling alert box -->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="rosbash%20-%20ROS%20Wiki_files/ros_org.png" alt="ros.org" border="0" width="238" height="51"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td align="right" valign="middle">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" width="1024" height="53"><nobr><img src="rosbash%20-%20ROS%20Wiki_files/menu_left.png" alt="" width="17" height="53"><a href="http://wiki.ros.org/"><img src="rosbash%20-%20ROS%20Wiki_files/menu_documentation.png" alt="Documentation" border="0" width="237" height="53"></a><img src="rosbash%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/browse/"><img src="rosbash%20-%20ROS%20Wiki_files/menu_browse_software.png" alt="Browse Software" border="0" width="268" height="53"></a><img src="rosbash%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/news"><img src="rosbash%20-%20ROS%20Wiki_files/menu_news.png" alt="News" border="0" width="84" height="53"></a><img src="rosbash%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://wiki.ros.org/ROS/Installation"><img src="rosbash%20-%20ROS%20Wiki_files/menu_download.png" alt="Download" border="0" width="151" height="53"></a><img src="rosbash%20-%20ROS%20Wiki_files/menu_right.png" width="60" height="53"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/rosbash?action=fullsearch&amp;context=180&amp;value=linkto%3A%22rosbash%22" rel="nofollow" title="Click to do a full-text search for this title">rosbash</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/rosbash">rosbash</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/rosbash?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/rosbash?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/rosbash">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="disabled" class="disabled">Delete Cache</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Delete Page</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="disabled" class="disabled">Subscribe User</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Remove Spam</option>
+<option value="show" disabled="disabled" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/rosbash?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><span id="rosversion_selector" class="btn-group">
+<button id="electric" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'electric'], hide:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'electric'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> electric </button>
+<button id="fuerte" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'fuerte'], hide:['fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'electric', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'fuerte'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> fuerte </button>
+<button id="groovy" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'groovy'], hide:['groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'electric', 'fuerte', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'groovy'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> groovy </button>
+<button id="hydro" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'hydro'], hide:['hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'electric', 'fuerte', 'groovy', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'hydro'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> hydro </button>
+<button id="indigo" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'indigo'], hide:['indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'jade', 'kinetic', 'lunar'], target_ros_distro:'indigo'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> indigo </button>
+<button id="jade" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'jade'], hide:['jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'kinetic', 'lunar'], target_ros_distro:'jade'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> jade </button>
+<button id="kinetic" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'kinetic_and_older', 'lunar_and_older', 'kinetic'], hide:['kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'lunar'], target_ros_distro:'kinetic'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="color: rgb(230, 230, 230); background: rgb(62, 79, 110) none repeat scroll 0% 0%;"> kinetic </button>
+<button id="lunar" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'lunar_and_older', 'lunar'], hide:['lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic'], target_ros_distro:'lunar'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> lunar </button>
+</span><span style="text-align:left">&nbsp;&nbsp;<a href="javascript:toggleDocStatus()">Documentation Status</a></span></p><div id="doc_status" style="background:#CCCCCC;display:none;margin-top:0px;margin-bottom:0px;padding-top:0px"><ul style="padding-top:5px;margin-top:0px;margin-bottom:0px;padding-bottom:5px;"><li><b>electric:</b> <i>Documentation generated on Unknown</i></li><br><li><b>fuerte:</b> <i>Documentation generated on January 02, 2014 at 11:52 AM</i></li><br><li><b>groovy:</b> <i>Documentation generated on October 06, 2014 at 06:51 AM</i></li><br><li><b>hydro:</b> <i>Documentation generated on August 27, 2015 at 02:46 PM</i><span style="font-size:10px"> (<a href="http://jenkins.ros.org/job/doc-hydro-ros/">doc job</a>).</span></li><br><li><b>indigo:</b> <i>Documentation generated on March 08, 2017 at 11:50 AM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Idoc/job/Idoc__ros__ubuntu_trusty_amd64">doc job</a>).</span></li><br><li><b>jade:</b> <i>Documentation generated on March 09, 2017 at 12:45 PM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Jdoc/job/Jdoc__ros__ubuntu_trusty_amd64">doc job</a>).</span></li><br><li><b>kinetic:</b> <i>Documentation generated on February 15, 2017 at 11:26 AM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Kdoc/job/Kdoc__ros__ubuntu_xenial_amd64">doc job</a>).</span></li><br><li><b>lunar:</b> <i>Documentation generated on April 23, 2017 at 10:09 AM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Ldoc/job/Ldoc__ros__ubuntu_xenial_amd64">doc job</a>).</span></li><br></ul></div><div class="version electric" style="display: none;"><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/electric/api/rosbash/html/">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros-1.6/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #b94a48;"><span class="glyphicon glyphicon-remove" style="color: white;"></span> No API documentation</span></p><p id="package-info">Assorted shell commands for using ros with bash.</p><p id="package-info-1"></p><ul><li>Author: Jeremy Leibs</li><li>License: BSD</li><li>External website:  <a href="http://pr.willowgarage.com/wiki/rosbash">http://pr.willowgarage.com/wiki/rosbash</a></li><li>Repository: <a href="http://wiki.ros.org/ros">ros</a></li><li>Source: svn <a href="https://code.ros.org/svn/ros/stacks/ros/tags/ros-1.6.9">https://code.ros.org/svn/ros/stacks/ros/tags/ros-1.6.9</a></li></ul></div>
+<div class="version fuerte" style="display: none;"><em><strong><a href="http://wiki.ros.org/ros?distro=fuerte">ros</a></strong>: <a href="http://wiki.ros.org/mk?distro=fuerte">mk</a> | rosbash | <a href="http://wiki.ros.org/rosboost_cfg?distro=fuerte">rosboost_cfg</a> | <a href="http://wiki.ros.org/rosbuild?distro=fuerte">rosbuild</a> | <a href="http://wiki.ros.org/rosclean?distro=fuerte">rosclean</a> | <a href="http://wiki.ros.org/roscreate?distro=fuerte">roscreate</a> | <a href="http://wiki.ros.org/roslang?distro=fuerte">roslang</a> | <a href="http://wiki.ros.org/roslib?distro=fuerte">roslib</a> | <a href="http://wiki.ros.org/rosmake?distro=fuerte">rosmake</a> | <a href="http://wiki.ros.org/rosunit?distro=fuerte">rosunit</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/fuerte/api/rosbash/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-2"></p><p id="package-info-3"></p><ul><li>Author: unknown</li><li>License: unknown</li><li>Source: git <a href="https://github.com/ros/ros">https://github.com/ros/ros.git</a> (branch: ros-1.8)</li></ul></div>
+<div class="version groovy" style="display: none;"><em><strong><a href="http://wiki.ros.org/ros?distro=groovy">ros</a></strong>: <a href="http://wiki.ros.org/mk?distro=groovy">mk</a> | rosbash | <a href="http://wiki.ros.org/rosboost_cfg?distro=groovy">rosboost_cfg</a> | <a href="http://wiki.ros.org/rosbuild?distro=groovy">rosbuild</a> | <a href="http://wiki.ros.org/rosclean?distro=groovy">rosclean</a> | <a href="http://wiki.ros.org/roscreate?distro=groovy">roscreate</a> | <a href="http://wiki.ros.org/roslang?distro=groovy">roslang</a> | <a href="http://wiki.ros.org/roslib?distro=groovy">roslib</a> | <a href="http://wiki.ros.org/rosmake?distro=groovy">rosmake</a> | <a href="http://wiki.ros.org/rosunit?distro=groovy">rosunit</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/groovy/api/rosbash/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/groovy/changelogs/rosbash/changelog.html">Changelog</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('groovydependencies-list'); return false;">Dependencies</a> (1)</strong><br><div id="groovydependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/catkin?distro=groovy">catkin</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('groovyused-by-list'); return false;">Used by</a> (7)</strong><br><div id="groovyused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/ff?distro=groovy">ff</a></li><li><a href="http://wiki.ros.org/hironx_ros_bridge?distro=groovy">hironx_ros_bridge</a></li><li><a href="http://wiki.ros.org/hrpsys?distro=groovy">hrpsys</a></li><li><a href="http://wiki.ros.org/openrtm_aist?distro=groovy">openrtm_aist</a></li><li><a href="http://wiki.ros.org/openrtm_tools?distro=groovy">openrtm_tools</a></li><li><a href="http://wiki.ros.org/ros?distro=groovy">ros</a></li><li><a href="http://wiki.ros.org/roseus?distro=groovy">roseus</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-4">Assorted shell commands for using ros with bash.</p><p id="package-info-5"></p><ul><li>Maintainer status: maintained</li><li>Maintainer: Dirk Thomas &lt;dthomas AT osrfoundation DOT org&gt;</li><li>Author: Jeremy Leibs, Thibault Kruse</li><li>License: BSD</li><li>Source: git <a href="https://github.com/ros/ros">https://github.com/ros/ros.git</a> (branch: groovy-devel)</li></ul></div>
+<div class="version hydro" style="display: none;"><em><strong><a href="http://wiki.ros.org/ros?distro=hydro">ros</a></strong>: <a href="http://wiki.ros.org/mk?distro=hydro">mk</a> | rosbash | <a href="http://wiki.ros.org/rosboost_cfg?distro=hydro">rosboost_cfg</a> | <a href="http://wiki.ros.org/rosbuild?distro=hydro">rosbuild</a> | <a href="http://wiki.ros.org/rosclean?distro=hydro">rosclean</a> | <a href="http://wiki.ros.org/roscreate?distro=hydro">roscreate</a> | <a href="http://wiki.ros.org/roslang?distro=hydro">roslang</a> | <a href="http://wiki.ros.org/roslib?distro=hydro">roslib</a> | <a href="http://wiki.ros.org/rosmake?distro=hydro">rosmake</a> | <a href="http://wiki.ros.org/rosunit?distro=hydro">rosunit</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/hydro/api/rosbash/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/hydro/changelogs/rosbash/changelog.html">Changelog</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('hydrodependencies-list'); return false;">Dependencies</a> (1)</strong><br><div id="hydrodependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/catkin?distro=hydro">catkin</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('hydroused-by-list'); return false;">Used by</a> (9)</strong><br><div id="hydroused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/camera_calibration_parsers?distro=hydro">camera_calibration_p...</a></li><li><a href="http://wiki.ros.org/ff?distro=hydro">ff</a></li><li><a href="http://wiki.ros.org/hironx_ros_bridge?distro=hydro">hironx_ros_bridge</a></li><li><a href="http://wiki.ros.org/hrpsys?distro=hydro">hrpsys</a></li><li><a href="http://wiki.ros.org/openrtm_tools?distro=hydro">openrtm_tools</a></li><li><a href="http://wiki.ros.org/rocon_launch?distro=hydro">rocon_launch</a></li><li><a href="http://wiki.ros.org/rocon_utilities?distro=hydro">rocon_utilities</a></li><li><a href="http://wiki.ros.org/ros?distro=hydro">ros</a></li><li><a href="http://wiki.ros.org/roseus?distro=hydro">roseus</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-6">Assorted shell commands for using ros with bash.</p><p id="package-info-7"></p><ul><li>Maintainer status: maintained</li><li>Maintainer: Dirk Thomas &lt;dthomas AT osrfoundation DOT org&gt;</li><li>Author: Jeremy Leibs, Thibault Kruse</li><li>License: BSD</li><li>Source: git <a href="https://github.com/ros/ros">https://github.com/ros/ros.git</a> (branch: hydro-devel)</li></ul></div>
+<div class="version indigo" style="display: none;"><em><strong><a href="http://wiki.ros.org/ros?distro=indigo">ros</a></strong>: <a href="http://wiki.ros.org/mk?distro=indigo">mk</a> | rosbash | <a href="http://wiki.ros.org/rosboost_cfg?distro=indigo">rosboost_cfg</a> | <a href="http://wiki.ros.org/rosbuild?distro=indigo">rosbuild</a> | <a href="http://wiki.ros.org/rosclean?distro=indigo">rosclean</a> | <a href="http://wiki.ros.org/roscreate?distro=indigo">roscreate</a> | <a href="http://wiki.ros.org/roslang?distro=indigo">roslang</a> | <a href="http://wiki.ros.org/roslib?distro=indigo">roslib</a> | <a href="http://wiki.ros.org/rosmake?distro=indigo">rosmake</a> | <a href="http://wiki.ros.org/rosunit?distro=indigo">rosunit</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/indigo/api/rosbash/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/indigo/changelogs/rosbash/changelog.html">Changelog</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('indigodependencies-list'); return false;">Dependencies</a> (1)</strong><br><div id="indigodependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/catkin?distro=indigo">catkin</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('indigoused-by-list'); return false;">Used by</a> (8)</strong><br><div id="indigoused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/ff?distro=indigo">ff</a></li><li><a href="http://wiki.ros.org/hironx_ros_bridge?distro=indigo">hironx_ros_bridge</a></li><li><a href="http://wiki.ros.org/openrtm_tools?distro=indigo">openrtm_tools</a></li><li><a href="http://wiki.ros.org/rocon_launch?distro=indigo">rocon_launch</a></li><li><a href="http://wiki.ros.org/ros?distro=indigo">ros</a></li><li><a href="http://wiki.ros.org/roseus?distro=indigo">roseus</a></li><li><a href="http://wiki.ros.org/swri_nodelet?distro=indigo">swri_nodelet</a></li><li><a href="http://wiki.ros.org/tetris_gazebo?distro=indigo">tetris_gazebo</a></li></ul></div><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandableJenkins('stack-indigojenkins-list'); return false;">Jenkins jobs</a> (9)</strong><br><div id="stack-indigojenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Isrc_uT/job/Isrc_uT__rosbash__ubuntu_trusty__source">source ubuntu trusty</a></li><li><a href="http://build.ros.org/view/Isrc_uS/job/Isrc_uS__rosbash__ubuntu_saucy__source">source ubuntu saucy</a></li><li><a href="http://build.ros.org/view/Ibin_arm_uThf/job/Ibin_arm_uThf__rosbash__ubuntu_trusty_armhf__binary">binary ubuntu trusty armhf</a></li><li><a href="http://build.ros.org/view/Ibin_uS32/job/Ibin_uS32__rosbash__ubuntu_saucy_i386__binary">binary ubuntu saucy i386</a></li><li><a href="http://build.ros.org/view/Ibin_uS64/job/Ibin_uS64__rosbash__ubuntu_saucy_amd64__binary">binary ubuntu saucy amd64</a></li><li><a href="http://build.ros.org/view/Ibin_uT32/job/Ibin_uT32__rosbash__ubuntu_trusty_i386__binary">binary ubuntu trusty i386</a></li><li><a href="http://build.ros.org/view/Ibin_uT64/job/Ibin_uT64__rosbash__ubuntu_trusty_amd64__binary">binary ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Idev/job/Idev__ros__ubuntu_trusty_amd64">devel ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Idoc/job/Idoc__ros__ubuntu_trusty_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-8">Assorted shell commands for using ros with bash.</p><p id="package-info-9"></p><ul><li>Maintainer status: maintained</li><li>Maintainer: Dirk Thomas &lt;dthomas AT osrfoundation DOT org&gt;</li><li>Author: Jeremy Leibs, Thibault Kruse</li><li>License: BSD</li><li>Source: git <a href="https://github.com/ros/ros">https://github.com/ros/ros.git</a> (branch: indigo-devel)</li></ul></div>
+<div class="version jade" style="display: none;"><em><strong><a href="http://wiki.ros.org/ros?distro=jade">ros</a></strong>: <a href="http://wiki.ros.org/mk?distro=jade">mk</a> | rosbash | <a href="http://wiki.ros.org/rosboost_cfg?distro=jade">rosboost_cfg</a> | <a href="http://wiki.ros.org/rosbuild?distro=jade">rosbuild</a> | <a href="http://wiki.ros.org/rosclean?distro=jade">rosclean</a> | <a href="http://wiki.ros.org/roscreate?distro=jade">roscreate</a> | <a href="http://wiki.ros.org/roslang?distro=jade">roslang</a> | <a href="http://wiki.ros.org/roslib?distro=jade">roslib</a> | <a href="http://wiki.ros.org/rosmake?distro=jade">rosmake</a> | <a href="http://wiki.ros.org/rosunit?distro=jade">rosunit</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/jade/api/rosbash/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/jade/changelogs/rosbash/changelog.html">Changelog</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('jadedependencies-list'); return false;">Dependencies</a> (1)</strong><br><div id="jadedependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/catkin?distro=jade">catkin</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('jadeused-by-list'); return false;">Used by</a> (5)</strong><br><div id="jadeused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/ff?distro=jade">ff</a></li><li><a href="http://wiki.ros.org/ros?distro=jade">ros</a></li><li><a href="http://wiki.ros.org/roseus?distro=jade">roseus</a></li><li><a href="http://wiki.ros.org/rosserial_client?distro=jade">rosserial_client</a></li><li><a href="http://wiki.ros.org/swri_nodelet?distro=jade">swri_nodelet</a></li></ul></div><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandableJenkins('stack-jadejenkins-list'); return false;">Jenkins jobs</a> (12)</strong><br><div id="stack-jadejenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Jsrc_uT/job/Jsrc_uT__rosbash__ubuntu_trusty__source">source ubuntu trusty</a></li><li><a href="http://build.ros.org/view/Jsrc_uU/job/Jsrc_uU__rosbash__ubuntu_utopic__source">source ubuntu utopic</a></li><li><a href="http://build.ros.org/view/Jsrc_uV/job/Jsrc_uV__rosbash__ubuntu_vivid__source">source ubuntu vivid</a></li><li><a href="http://build.ros.org/view/Jbin_arm_uThf/job/Jbin_arm_uThf__rosbash__ubuntu_trusty_armhf__binary">binary ubuntu trusty armhf</a></li><li><a href="http://build.ros.org/view/Jbin_uT32/job/Jbin_uT32__rosbash__ubuntu_trusty_i386__binary">binary ubuntu trusty i386</a></li><li><a href="http://build.ros.org/view/Jbin_uT64/job/Jbin_uT64__rosbash__ubuntu_trusty_amd64__binary">binary ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Jbin_uU32/job/Jbin_uU32__rosbash__ubuntu_utopic_i386__binary">binary ubuntu utopic i386</a></li><li><a href="http://build.ros.org/view/Jbin_uU64/job/Jbin_uU64__rosbash__ubuntu_utopic_amd64__binary">binary ubuntu utopic amd64</a></li><li><a href="http://build.ros.org/view/Jbin_uV32/job/Jbin_uV32__rosbash__ubuntu_vivid_i386__binary">binary ubuntu vivid i386</a></li><li><a href="http://build.ros.org/view/Jbin_uV64/job/Jbin_uV64__rosbash__ubuntu_vivid_amd64__binary">binary ubuntu vivid amd64</a></li><li><a href="http://build.ros.org/view/Jdev/job/Jdev__ros__ubuntu_trusty_amd64">devel ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Jdoc/job/Jdoc__ros__ubuntu_trusty_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-10">Assorted shell commands for using ros with bash.</p><p id="package-info-11"></p><ul><li>Maintainer status: maintained</li><li>Maintainer: Dirk Thomas &lt;dthomas AT osrfoundation DOT org&gt;</li><li>Author: Jeremy Leibs, Thibault Kruse</li><li>License: BSD</li><li>Source: git <a href="https://github.com/ros/ros">https://github.com/ros/ros.git</a> (branch: jade-devel)</li></ul></div>
+<div class="version kinetic" style="display: block;"><em><strong><a href="http://wiki.ros.org/ros?distro=kinetic">ros</a></strong>: <a href="http://wiki.ros.org/mk?distro=kinetic">mk</a> | rosbash | <a href="http://wiki.ros.org/rosboost_cfg?distro=kinetic">rosboost_cfg</a> | <a href="http://wiki.ros.org/rosbuild?distro=kinetic">rosbuild</a> | <a href="http://wiki.ros.org/rosclean?distro=kinetic">rosclean</a> | <a href="http://wiki.ros.org/roscreate?distro=kinetic">roscreate</a> | <a href="http://wiki.ros.org/roslang?distro=kinetic">roslang</a> | <a href="http://wiki.ros.org/roslib?distro=kinetic">roslib</a> | <a href="http://wiki.ros.org/rosmake?distro=kinetic">rosmake</a> | <a href="http://wiki.ros.org/rosunit?distro=kinetic">rosunit</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/kinetic/api/rosbash/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/kinetic/changelogs/rosbash/changelog.html">Changelog</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('kineticdependencies-list'); return false;">Dependencies</a> (1)</strong><br><div id="kineticdependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/catkin?distro=kinetic">catkin</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('kineticused-by-list'); return false;">Used by</a> (5)</strong><br><div id="kineticused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/ff?distro=kinetic">ff</a></li><li><a href="http://wiki.ros.org/rocon_launch?distro=kinetic">rocon_launch</a></li><li><a href="http://wiki.ros.org/ros?distro=kinetic">ros</a></li><li><a href="http://wiki.ros.org/rosserial_client?distro=kinetic">rosserial_client</a></li><li><a href="http://wiki.ros.org/swri_nodelet?distro=kinetic">swri_nodelet</a></li></ul></div><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandableJenkins('stack-kineticjenkins-list'); return false;">Jenkins jobs</a> (13)</strong><br><div id="stack-kineticjenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Ksrc_uW/job/Ksrc_uW__rosbash__ubuntu_wily__source">source ubuntu wily</a></li><li><a href="http://build.ros.org/view/Ksrc_uX/job/Ksrc_uX__rosbash__ubuntu_xenial__source">source ubuntu xenial</a></li><li><a href="http://build.ros.org/view/Ksrc_dJ/job/Ksrc_dJ__rosbash__debian_jessie__source">source debian jessie</a></li><li><a href="http://build.ros.org/view/Kbin_uW64/job/Kbin_uW64__rosbash__ubuntu_wily_amd64__binary">binary ubuntu wily amd64</a></li><li><a href="http://build.ros.org/view/Kbin_uW32/job/Kbin_uW32__rosbash__ubuntu_wily_i386__binary">binary ubuntu wily i386</a></li><li><a href="http://build.ros.org/view/Kbin_uX64/job/Kbin_uX64__rosbash__ubuntu_xenial_amd64__binary">binary ubuntu xenial amd64</a></li><li><a href="http://build.ros.org/view/Kbin_uX32/job/Kbin_uX32__rosbash__ubuntu_xenial_i386__binary">binary ubuntu xenial i386</a></li><li><a href="http://build.ros.org/view/Kbin_dj_dJ64/job/Kbin_dj_dJ64__rosbash__debian_jessie_amd64__binary">binary debian jessie amd64</a></li><li><a href="http://build.ros.org/view/Kbin_djv8_dJv8/job/Kbin_djv8_dJv8__rosbash__debian_jessie_arm64__binary">binary debian jessie arm64</a></li><li><a href="http://build.ros.org/view/Kbin_uxhf_uXhf/job/Kbin_uxhf_uXhf__rosbash__ubuntu_xenial_armhf__binary">binary ubuntu xenial armhf</a></li><li><a href="http://build.ros.org/view/Kbin_uxv8_uXv8/job/Kbin_uxv8_uXv8__rosbash__ubuntu_xenial_arm64__binary">binary ubuntu xenial arm64</a></li><li><a href="http://build.ros.org/view/Kdev/job/Kdev__ros__ubuntu_xenial_amd64">devel ubuntu xenial amd64</a></li><li><a href="http://build.ros.org/view/Kdoc/job/Kdoc__ros__ubuntu_xenial_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-12">Assorted shell commands for using ros with bash.</p><p id="package-info-13"></p><ul><li>Maintainer status: maintained</li><li>Maintainer: Dirk Thomas &lt;dthomas AT osrfoundation DOT org&gt;</li><li>Author: Jeremy Leibs, Thibault Kruse</li><li>License: BSD</li><li>Source: git <a href="https://github.com/ros/ros">https://github.com/ros/ros.git</a> (branch: kinetic-devel)</li></ul></div>
+<div class="version lunar" style="display: none;"><em><strong><a href="http://wiki.ros.org/ros?distro=lunar">ros</a></strong>: <a href="http://wiki.ros.org/mk?distro=lunar">mk</a> | rosbash | <a href="http://wiki.ros.org/rosboost_cfg?distro=lunar">rosboost_cfg</a> | <a href="http://wiki.ros.org/rosbuild?distro=lunar">rosbuild</a> | <a href="http://wiki.ros.org/rosclean?distro=lunar">rosclean</a> | <a href="http://wiki.ros.org/roscreate?distro=lunar">roscreate</a> | <a href="http://wiki.ros.org/roslang?distro=lunar">roslang</a> | <a href="http://wiki.ros.org/roslib?distro=lunar">roslib</a> | <a href="http://wiki.ros.org/rosmake?distro=lunar">rosmake</a> | <a href="http://wiki.ros.org/rosunit?distro=lunar">rosunit</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/lunar/api/rosbash/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/rosbash/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:rosbash/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/lunar/changelogs/rosbash/changelog.html">Changelog</a></li><li><a class="nonexistent" href="http://wiki.ros.org/ros/ChangeList">Change List</a></li><li><a href="http://wiki.ros.org/rosbash/Reviews">Reviews</a></li></ul><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('lunardependencies-list'); return false;">Dependencies</a> (1)</strong><br><div id="lunardependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/catkin?distro=lunar">catkin</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('lunarused-by-list'); return false;">Used by</a> (1)</strong><br><div id="lunarused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/ros?distro=lunar">ros</a></li></ul></div><script type="text/javascript" src="rosbash%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandableJenkins('stack-lunarjenkins-list'); return false;">Jenkins jobs</a> (13)</strong><br><div id="stack-lunarjenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Lsrc_uX/job/Lsrc_uX__rosbash__ubuntu_xenial__source">source ubuntu xenial</a></li><li><a href="http://build.ros.org/view/Lsrc_uY/job/Lsrc_uY__rosbash__ubuntu_yakkety__source">source ubuntu yakkety</a></li><li><a href="http://build.ros.org/view/Lsrc_uZ/job/Lsrc_uZ__rosbash__ubuntu_zesty__source">source ubuntu zesty</a></li><li><a href="http://build.ros.org/view/Lsrc_dS/job/Lsrc_dS__rosbash__debian_stretch__source">source debian stretch</a></li><li><a href="http://build.ros.org/view/Lbin_uX64/job/Lbin_uX64__rosbash__ubuntu_xenial_amd64__binary">binary ubuntu xenial amd64</a></li><li><a href="http://build.ros.org/view/Lbin_uY64/job/Lbin_uY64__rosbash__ubuntu_yakkety_amd64__binary">binary ubuntu yakkety amd64</a></li><li><a href="http://build.ros.org/view/Lbin_uZ64/job/Lbin_uZ64__rosbash__ubuntu_zesty_amd64__binary">binary ubuntu zesty amd64</a></li><li><a href="http://build.ros.org/view/Lbin_ds_dS64/job/Lbin_ds_dS64__rosbash__debian_stretch_amd64__binary">binary debian stretch amd64</a></li><li><a href="http://build.ros.org/view/Lbin_dsv8_dSv8/job/Lbin_dsv8_dSv8__rosbash__debian_stretch_arm64__binary">binary debian stretch arm64</a></li><li><a href="http://build.ros.org/view/Lbin_uxhf_uXhf/job/Lbin_uxhf_uXhf__rosbash__ubuntu_xenial_armhf__binary">binary ubuntu xenial armhf</a></li><li><a href="http://build.ros.org/view/Lbin_uxv8_uXv8/job/Lbin_uxv8_uXv8__rosbash__ubuntu_xenial_arm64__binary">binary ubuntu xenial arm64</a></li><li><a href="http://build.ros.org/view/Ldev/job/Ldev__ros__ubuntu_xenial_amd64">devel ubuntu xenial amd64</a></li><li><a href="http://build.ros.org/view/Ldoc/job/Ldoc__ros__ubuntu_xenial_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-14">Assorted shell commands for using ros with bash.</p><p id="package-info-15"></p><ul><li>Maintainer status: maintained</li><li>Maintainer: Dirk Thomas &lt;dthomas AT osrfoundation DOT org&gt;</li><li>Author: Jeremy Leibs, Thibault Kruse</li><li>License: BSD</li><li>Source: git <a href="https://github.com/ros/ros">https://github.com/ros/ros.git</a> (branch: lunar-devel)</li></ul></div><p class="line874"> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span></p><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="#Overview">Overview</a></li><li>
+<a href="#Other_Shells">Other Shells</a></li><li>
+<a href="#Command_line_utilities">Command line utilities</a><ol><li>
+<a href="#roscd">roscd</a></li><li>
+<a href="#rospd">rospd</a></li><li>
+<a href="#rosd">rosd</a></li><li>
+<a href="#rosls">rosls</a></li><li>
+<a href="#rosed">rosed</a></li><li>
+<a href="#roscp">roscp</a></li><li>
+<a href="#rosrun">rosrun</a></li></ol></li><li>
+<a href="#Tab_Completion">Tab Completion</a></li></ol></div><p class="line874"> <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span></p><p class="line867">
+</p><h2 id="Overview">Overview</h2>
+<span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line862">The <tt class="backtick">rosbash</tt> package contains some useful bash functions and adds tab-completion to a large number of the basic ros utilities. <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span></p><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></p><div class="version electric" style="display: none;"><span class="anchor" id="line-1-1"></span><p class="line862">To enable <tt class="backtick">rosbash</tt> in Electric, make sure that it gets sourced in your bashrc: <span class="anchor" id="line-2-1"></span><span class="anchor" id="line-3-1"></span><span class="anchor" id="line-4-1"></span></p><pre><span class="anchor" id="line-1-2"></span>source ${ROS_ROOT}/tools/rosbash/rosbash</pre><span class="anchor" id="line-5-1"></span><p class="line874">This is done by default when following most of the standard install instructions. <span class="anchor" id="line-6-1"></span>The following source command only works with newer versions of ROS. </p></div><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line874">When you source the distro specific setup file like: <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span></p><pre><span class="anchor" id="line-1-3"></span>source /opt/ros/<span class="rosversion_name">kinetic</span>/setup.bash</pre><span class="anchor" id="line-22"></span><p class="line874">you will implicitly get all bash-specific command. <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span></p><p class="line867">
+</p><h2 id="Other_Shells">Other Shells</h2>
+<span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line862">The <tt class="backtick">rosbash</tt> package includes limited support for <tt class="backtick">zsh</tt> and <tt class="backtick">tcsh</tt> by way of sourcing the <tt class="backtick">roszsh</tt> or <tt class="backtick">rostcsh</tt>
+ files respectively. We currently do not provide documentation on these 
+shells, though much of the functionality is similar to the bash shell 
+extensions. <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></p><p class="line867">
+</p><h2 id="Command_line_utilities">Command line utilities</h2>
+<span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line867"><tt class="backtick">rosbash</tt> includes the following command line utilities: <span class="anchor" id="line-31"></span></p><ul><li><p class="line891"><a href="http://wiki.ros.org/rosbash#roscd">roscd</a> - change directory starting with package, stack, or location name <span class="anchor" id="line-32"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/rosbash#rospd">rospd</a> - <tt class="backtick">pushd</tt> equivalent of <tt class="backtick">roscd</tt> <span class="anchor" id="line-33"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/rosbash#rosd">rosd</a> - lists directories in the directory-stack <span class="anchor" id="line-34"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/rosbash#rosls">rosls</a> - list files of a ros package <span class="anchor" id="line-35"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/rosbash#rosed">rosed</a> - edit a file in a package <span class="anchor" id="line-36"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/rosbash#roscp">roscp</a> - copy a file from a package <span class="anchor" id="line-37"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/rosbash#rosrun">rosrun</a> - run executables of a ros package <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span></p></li></ul><p class="line867"><span class="anchor" id="roscd"></span> <span class="anchor" id="line-41"></span>
+</p><h3 id="roscd-1">roscd</h3>
+<span class="anchor" id="line-42"></span><p class="line867"><tt class="backtick">roscd</tt> allows you to change directories using a package name, stack name, or special location. <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span></p><p class="line874">Usage: <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></p><pre><span class="anchor" id="line-1-4"></span>roscd &lt;package-or-stack&gt;[/subdir]</pre><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><p class="line874">For example: <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span></p><pre><span class="anchor" id="line-1-5"></span>roscd roscpp</pre><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><p class="line874">You can continue to use a relative path after the package name to go further into the package: <span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></p><pre><span class="anchor" id="line-1-6"></span>roscd roscpp/include/ros</pre><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line867"><tt>roscd</tt> without argument will take you to <tt>$ROS_WORKSPACE</tt>. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p><p class="line862">Additionally, the <tt class="backtick">ROS_LOCATIONS</tt> environment variable can be used to add additional special locations for use with <tt class="backtick">roscd</tt>.  <tt class="backtick">ROS_LOCATIONS</tt> is a colon-separated list of <tt class="backtick">key=path</tt> pairs. <span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span></p><p class="line862">For example, adding the following to your <tt class="backtick">.bashrc</tt> file: <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span></p><pre><span class="anchor" id="line-1-7"></span>export ROS_LOCATIONS="pkgs=~/ros/pkgs:dev=~/ros/dev"</pre><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line874">Will then allow you to type: <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span></p><pre><span class="anchor" id="line-1-8"></span>$ roscd dev</pre><span class="anchor" id="line-72"></span><p class="line862">and end up in <tt class="backtick">~/ros/dev</tt>. <span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span></p><p class="line867"><span class="anchor" id="rospd"></span> <span class="anchor" id="line-76"></span>
+</p><h3 id="rospd-1">rospd</h3>
+<span class="anchor" id="line-77"></span><p class="line867"><tt class="backtick">rospd</tt> is the <tt class="backtick">pushd</tt> equivalent of <tt class="backtick">roscd</tt>.
+  It allows you to keep multiple locations in a directory-stack while 
+still using ros package names.  You can then  use the number of any 
+directory in your directory stack to jump back there. <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span></p><p class="line874">For example: <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span></p><pre><span class="anchor" id="line-1-9"></span>leibs@bar:~$ rospd hokuyo_node/
+<span class="anchor" id="line-2-2"></span>0 ~/ros/pkgs/laser_drivers/hokuyo_node
+<span class="anchor" id="line-3-2"></span>1 ~
+<span class="anchor" id="line-4-2"></span>leibs@bar:~/ros/pkgs/laser_drivers/hokuyo_node$ rospd roscpp_tutorials/
+<span class="anchor" id="line-5-2"></span>0 ~/ros/pkgs/ros_tutorials/roscpp_tutorials
+<span class="anchor" id="line-6-2"></span>1 ~/ros/pkgs/laser_drivers/hokuyo_node
+<span class="anchor" id="line-7-1"></span>2 ~
+<span class="anchor" id="line-8-1"></span>leibs@bar:~/ros/pkgs/ros_tutorials/roscpp_tutorials$ rospd laser_pipeline/
+<span class="anchor" id="line-9-1"></span>0 ~/ros/dev/laser_pipeline
+<span class="anchor" id="line-10-1"></span>1 ~/ros/pkgs/ros_tutorials/roscpp_tutorials
+<span class="anchor" id="line-11-1"></span>2 ~/ros/pkgs/laser_drivers/hokuyo_node
+<span class="anchor" id="line-12-1"></span>3 ~
+<span class="anchor" id="line-13-1"></span>leibs@bar:~/ros/dev/laser_pipeline$ rospd 1
+<span class="anchor" id="line-14-1"></span>0 ~/ros/pkgs/ros_tutorials/roscpp_tutorials
+<span class="anchor" id="line-15-1"></span>1 ~/ros/pkgs/laser_drivers/hokuyo_node
+<span class="anchor" id="line-16-1"></span>2 ~
+<span class="anchor" id="line-17-1"></span>3 ~/ros/dev/laser_pipeline</pre><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><p class="line867"><span class="anchor" id="rosd"></span> <span class="anchor" id="line-102"></span>
+</p><h3 id="rosd-1">rosd</h3>
+<span class="anchor" id="line-103"></span><p class="line867"><tt class="backtick">rosd</tt> lists the directories in your directory stack.  This is for use with <tt class="backtick">rospd</tt>. <span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span></p><p class="line874">For example: <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span></p><pre><span class="anchor" id="line-1-10"></span>leibs@bar:~/ros/pkgs/laser_drivers/hokuyo_node$ rosd
+<span class="anchor" id="line-2-3"></span>0 ~/ros/pkgs/laser_drivers/hokuyo_node
+<span class="anchor" id="line-3-3"></span>1 ~
+<span class="anchor" id="line-4-3"></span>2 ~/ros/dev/laser_pipeline</pre><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><p class="line867"><span class="anchor" id="rosls"></span> <span class="anchor" id="line-115"></span>
+</p><h3 id="rosls-1">rosls</h3>
+<span class="anchor" id="line-116"></span><p class="line867"><tt class="backtick">rosls</tt> allows you to view the contents of a package, stack, or location. <span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span></p><p class="line874">For example: <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span></p><pre><span class="anchor" id="line-1-11"></span>$ rosls roscpp
+<span class="anchor" id="line-2-4"></span>$ rosls roscpp/include/ros</pre><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><p class="line867"><span class="anchor" id="rosed"></span> <span class="anchor" id="line-126"></span>
+</p><h3 id="rosed-1">rosed</h3>
+<span class="anchor" id="line-127"></span><p class="line867"><tt class="backtick">rosed</tt> allows you to easily edit files in a ROS package by typing the package name and the name of the file you want to edit: <span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span></p><pre><span class="anchor" id="line-1-12"></span>$ rosed roscpp_tutorials add_two_ints_server.cpp</pre><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><p class="line874">Note:
+ you can specify ANY file in a package, including those further down 
+within the file hierarchy.  If you specify an ambiguous file you will be
+ prompted to select one. <span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span></p><p class="line874">For example: <span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span></p><pre><span class="anchor" id="line-1-13"></span>$ rosed roscpp CMakeLists.txt 
+<span class="anchor" id="line-2-5"></span>You have chosen a non-unique filename, please pick one of the following:
+<span class="anchor" id="line-3-4"></span>1) ~/ros/ros/core/roscpp/test/CMakeLists.txt
+<span class="anchor" id="line-4-4"></span>2) ~/ros/ros/core/roscpp/CMakeLists.txt
+<span class="anchor" id="line-5-3"></span>3) ~/ros/ros/core/roscpp/src/CMakeLists.txt
+<span class="anchor" id="line-6-3"></span>4) ~/ros/ros/core/roscpp/src/libros/CMakeLists.txt
+<span class="anchor" id="line-7-2"></span>#?</pre><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><p class="line862">The default editor for rosed is vim. To use a different editor, set the <tt class="backtick">EDITOR</tt> environment variable.  E.g., in your ~/.bashrc: <span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span></p><pre><span class="anchor" id="line-1-14"></span>export EDITOR='emacs -nw'</pre><span class="anchor" id="line-149"></span><p class="line874">This example makes emacs the default editor. <span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span></p><p class="line862">You also can change the editor for one <tt class="backtick">rosed</tt> call on the fly: <span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span></p><pre><span class="anchor" id="line-1-15"></span>EDITOR=geany rosed rosbash rosbash</pre><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><p class="line867"><span class="anchor" id="roscp.29"></span> <span class="anchor" id="line-158"></span>
+</p><h3 id="roscp">roscp</h3>
+<span class="anchor" id="line-159"></span><p class="line867"><tt class="backtick">roscp</tt> allows you to conveniently copy a file from a package.  Similar to <tt class="backtick">rosed</tt> you can specify any file in the package regardless of hierarchy. <span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span></p><p class="line874">For example: <span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span></p><pre><span class="anchor" id="line-1-16"></span>$ roscp roscpp_tutorials talker.cpp .</pre><span class="anchor" id="line-165"></span><p class="line862">Will end up copying the file from <tt class="backtick">~/ros/pkgs/ros_tutorials/roscpp_tutorials/talker/talker.cpp</tt> <span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span></p><p class="line867"><span class="anchor" id="rosrun"></span> <span class="anchor" id="line-169"></span>
+</p><h3 id="rosrun-1">rosrun</h3>
+<span class="anchor" id="line-170"></span><p class="line867"><tt class="backtick">rosrun</tt> allows you to run an executable in an arbitrary package from anywhere without having to give its full path or <tt class="backtick">cd</tt>/<tt class="backtick">roscd</tt> there first. <span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span></p><p class="line874">Usage: <span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span></p><pre><span class="anchor" id="line-1-17"></span>rosrun &lt;package&gt; &lt;executable&gt;</pre><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><p class="line874">Example: <span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span></p><pre><span class="anchor" id="line-1-18"></span>rosrun roscpp_tutorials talker</pre><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><p class="line862">It's also possible to pass a <tt class="backtick">~parameter</tt> using the following syntax (replace the <tt class="backtick">~</tt> with an <tt class="backtick">_</tt>): <span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span></p><pre><span class="anchor" id="line-1-19"></span>rosrun package node _parameter:=value</pre><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><p class="line874">Example: <span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span></p><pre><span class="anchor" id="line-1-20"></span>rosrun my_package my_node _my_param:=value</pre><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><p class="line862">Starting in <strong>Indigo</strong>, rosrun has a <tt class="backtick">--prefix</tt> option which can be used to run a node in gdb or valgrind. <span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span></p><p class="line874">Example: <span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span></p><pre><span class="anchor" id="line-1-21"></span>rosrun --prefix 'gdb -ex run --args' my_package my_node</pre><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><p class="line862">For more example prefixes, see: <a class="http" href="http://wiki.ros.org/roslaunch/Tutorials/Roslaunch%20Nodes%20in%20Valgrind%20or%20GDB">Roslaunch Nodes in Valgrind or GDB</a> <span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span></p><p class="line867">
+</p><h2 id="Tab_Completion">Tab Completion</h2>
+<span class="anchor" id="line-202"></span><p class="line867"><tt class="backtick">rosbash</tt> enables tab-completion for its own tools and for a number of other ros utilities: <a href="http://wiki.ros.org/rosmake">rosmake</a>, <a href="http://wiki.ros.org/roslaunch">roslaunch</a>, <a href="http://wiki.ros.org/rosparam">rosparam</a>, <a href="http://wiki.ros.org/rosnode">rosnode</a>, <a href="http://wiki.ros.org/rostopic">rostopic</a>, <a href="http://wiki.ros.org/rosservice">rosservice</a>, <a href="http://wiki.ros.org/rosmsg">rosmsg</a>, <a href="http://wiki.ros.org/rossrv">rossrv</a>, <a href="http://wiki.ros.org/rosbag">rosbag</a>. <span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span></p><p class="line862">There are a couple of generic completion rules that may be appropriate for other utilities.  Looking through the <tt class="backtick">rosbash</tt>
+ source may provide insights into replicating similar functionality for 
+other nodes, however, the code is not yet nicely generalized or 
+re-usable.  In a future release of ROS, we plan to incorporate a more 
+generically re-usable tab-completion framework into rosbash and the 
+other common shells used by ROS. <span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span></p><p class="line867"><span class="anchor" id="line-208"></span></p><p class="line867"><span class="anchor" id="line-209"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="en">Wiki: rosbash  (last edited 2015-06-13 18:33:03 by <span title="AustinHendrix @ c-76-126-185-64.hsd1.ca.comcast.net[76.126.185.64]"><a href="http://wiki.ros.org/AustinHendrix" title="AustinHendrix @ c-76-126-185-64.hsd1.ca.comcast.net[76.126.185.64]">AustinHendrix</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="rosbash%20-%20ROS%20Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="tf_Tutorials%20-%20ROS%20Wiki_files/bootstrap.css">
+<script type="text/javascript" src="tf_Tutorials%20-%20ROS%20Wiki_files/4c8610d177"></script><script src="tf_Tutorials%20-%20ROS%20Wiki_files/nr-1026.js"></script><script type="text/javascript" async="" src="tf_Tutorials%20-%20ROS%20Wiki_files/ga.js"></script><script src="tf_Tutorials%20-%20ROS%20Wiki_files/jquery-1.js"></script>
+<script src="tf_Tutorials%20-%20ROS%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="tf_Tutorials%20-%20ROS%20Wiki_files/sorttable.js"></script>
+<script type="text/javascript" src="tf_Tutorials%20-%20ROS%20Wiki_files/jquery.js"></script>                         
+<script type="text/javascript" src="tf_Tutorials%20-%20ROS%20Wiki_files/seesaw.js"></script> 
+<script type="text/javascript" src="tf_Tutorials%20-%20ROS%20Wiki_files/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGk1TG08=","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":727}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>tf/Tutorials - ROS Wiki</title>
+<script type="text/javascript" src="tf_Tutorials%20-%20ROS%20Wiki_files/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="tf_Tutorials%20-%20ROS%20Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="tf_Tutorials%20-%20ROS%20Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="tf_Tutorials%20-%20ROS%20Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="tf_Tutorials%20-%20ROS%20Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/tf/Tutorials">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/tf/Tutorials?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/tf/Tutorials?action=print">
+<link rel="Up" href="http://wiki.ros.org/tf">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="en">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="tf_Tutorials%20-%20ROS%20Wiki_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+  
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable the alert box uncomment the block below. Change the alert_box_name to a new name. Then update the content below the button. -->
+<!-- Disabling alert box-->
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_lunar_teeshirt'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+ROS Lunar Loggerhead Tshirts and Hoodies are available worldwide! You can order from fulfillment centers in the <a href="https://teespring.com/ros-lunar-loggerhead">US</a> or <a href="https://teespring.com/ros-lunar-loggerhead-eu">Europe</a>.
+<br>
+Ordering closes May 9th!  And there are <a href="https://www.stickermule.com/user/1070828488/stickers">stickers too.</a>
+    </div>
+<!-- End disabling alert box -->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="tf_Tutorials%20-%20ROS%20Wiki_files/ros_org.png" alt="ros.org" width="238" height="51" border="0"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td valign="middle" align="right">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" width="1024" height="53"><nobr><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_left.png" alt="" width="17" height="53"><a href="http://wiki.ros.org/"><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_documentation.png" alt="Documentation" width="237" height="53" border="0"></a><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/browse/"><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_browse_software.png" alt="Browse Software" width="268" height="53" border="0"></a><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/news"><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_news.png" alt="News" width="84" height="53" border="0"></a><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://wiki.ros.org/ROS/Installation"><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_download.png" alt="Download" width="151" height="53" border="0"></a><img src="tf_Tutorials%20-%20ROS%20Wiki_files/menu_right.png" width="60" height="53"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://wiki.ros.org/tf">tf</a></li><li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/tf/Tutorials?action=fullsearch&amp;context=180&amp;value=linkto%3A%22tf%2FTutorials%22" rel="nofollow" title="Click to do a full-text search for this title">Tutorials</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/tf/Tutorials">tf/Tutorials</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/tf/Tutorials?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/tf/Tutorials?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/tf/Tutorials">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="disabled" class="disabled">Delete Cache</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Delete Page</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="disabled" class="disabled">Subscribe User</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Remove Spam</option>
+<option value="show" disabled="disabled" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/tf/Tutorials?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">Many of the 
+tf tutorials are available for both C++ and Python. The tutorials are 
+streamlined to complete either the C++ track or the Python track. If you
+ want to learn both C++ and Python, you should run through the tutorials
+ once for C++ and once for Python. <span class="anchor" id="line-2"></span>Note that the general concept itself is explained directly on <a href="http://wiki.ros.org/tf">tf package</a>. <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span></p><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="#ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.Workspace_Setup">Workspace Setup</a></li><li>
+<a href="#Learning_tf">Learning tf</a></li><li>
+<a href="#Debugging_tf">Debugging tf</a></li><li>
+<a href="#Using_sensor_messages_with_tf">Using sensor messages with tf</a></li><li>
+<a href="#Setting_up_your_robot_with_tf">Setting up your robot with tf</a></li><li>
+<a href="#Video_Tutorial_.28PR2_Beta_Workshop.29">Video Tutorial (PR2 Beta Workshop)</a></li></ol></div><p class="line874"> <span class="anchor" id="line-5"></span></p><div dir="ltr" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.content" lang="en"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.top"></span>
+<span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1"></span><p class="line867">
+</p><h2 id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.Workspace_Setup">Workspace Setup</h2>
+<span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-3"></span><p class="line862">If you have not yet created a workspace in which to complete the tutorials, 
+
+
+<a href="" onclick="seeSaw({toggle:['EnvironmentSetup'], show:[], hide:[]},0,true);return false;">
+<span class="seesaw EnvironmentSetup  showpart" style="display:inline">click here for some brief instructions</span>
+<span class="seesaw EnvironmentSetup  hidepart" style="display:none">click here for some brief instructions</span>
+</a>
+
+
+
+
+. <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-4"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-5"></span></p><p class="line867"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-6"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-7"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-8"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-9"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-10"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-11"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-12"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-13"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-14"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-15"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-16"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-17"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-18"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-19"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-20"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-21"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-22"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-23"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-24"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-25"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-26"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-27"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-28"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-29"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-30"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-31"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-32"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-33"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-34"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-35"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-36"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-37"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-38"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-39"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-40"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-41"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-42"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-43"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-44"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-45"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-46"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-47"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-48"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-49"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-50"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-51"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-52"></span></p><div class="seesaw EnvironmentSetup" style="display: none;"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-1"></span><p class="line867"><span id="rosversion_selector" class="btn-group">
+<button id="electric" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'electric'], hide:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'electric'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> electric </button>
+<button id="fuerte" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'fuerte'], hide:['fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'electric', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'fuerte'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> fuerte </button>
+<button id="groovy" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'groovy'], hide:['groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'electric', 'fuerte', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'groovy'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> groovy </button>
+<button id="hydro" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'hydro'], hide:['hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'electric', 'fuerte', 'groovy', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'hydro'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> hydro </button>
+<button id="indigo" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'indigo'], hide:['indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'jade', 'kinetic', 'lunar'], target_ros_distro:'indigo'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> indigo </button>
+<button id="jade" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'jade'], hide:['jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'kinetic', 'lunar'], target_ros_distro:'jade'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> jade </button>
+<button id="kinetic" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'kinetic_and_older', 'lunar_and_older', 'kinetic'], hide:['kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'lunar'], target_ros_distro:'kinetic'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="color: rgb(230, 230, 230); background: rgb(62, 79, 110) none repeat scroll 0% 0%;"> kinetic </button>
+<button id="lunar" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'lunar_and_older', 'lunar'], hide:['lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic'], target_ros_distro:'lunar'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> lunar </button>
+</span> <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-2-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-3-1"></span></p><p class="line867"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-4-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-5-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-6-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-7-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-8-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-9-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-10-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-11-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-12-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-13-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-14-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-15-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-16-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-17-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-18-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-19-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-20-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-21-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-22-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-23-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-24-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-25-1"></span></p><div class="version fuerte_and_older" style="display: none;"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-2"></span><p class="line874">Create a file named ~/tutorials.rosinstall with the following content: <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-2-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-3-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-4-2"></span></p><pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-3"></span>- other: { local-name: workspace }</pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-5-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-6-2"></span><p class="line862">To overlay on the <tt class="backtick">ROS</tt> distro you are using: <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-7-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-8-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-9-2"></span></p><pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-4"></span>rosinstall ~/tutorials /opt/ros/<span class="rosversion_name">kinetic</span>&gt;&gt; ~/tutorials.rosinstall</pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-10-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-11-2"></span><p class="line862">To use this workspace <strong>whenever</strong> you open a new terminal setup your ROS environment by typing: <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-12-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-13-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-14-2"></span></p><pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-5"></span>source ~/tutorials/setup.bash</pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-15-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-16-2"></span><p class="line862">Sourcing this file adds <tt class="backtick">~/tutorials/workspace</tt> to your ROS_PACKAGE_PATH. <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-17-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-18-2"></span></p><p class="line862">Any packages you create in that directory will be found by <a href="http://wiki.ros.org/rospack">rospack</a>. <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-19-2"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-20-2"></span></p><p class="line862">An alternative to source your script file is to add it to your <tt class="backtick">.bashrc</tt>, but remember that this will persist in your <tt class="backtick">.bashrc</tt> into the future, and you can only have one environment setup.  For more on what this is doing see <a href="http://wiki.ros.org/rosinstall#Generating_setup.sh">this page</a> </p></div><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-26-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-27-1"></span><p class="line867"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-28-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-29-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-30-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-31-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-32-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-33-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-34-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-35-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-36-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-37-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-38-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-39-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-40-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-41-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-42-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-43-1"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-44-1"></span></p><div class="version groovy_and_newer" style="display: block;"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-6"></span><p class="line862">Create a <a href="http://wiki.ros.org/catkin">catkin</a> workspace like so: <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-2-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-3-3"></span></p><p class="line867"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-4-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-5-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-6-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-7-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-8-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-9-3"></span></p><pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-7"></span>$ source /opt/ros/<span class="rosversion_name">kinetic</span>/setup.bash
+<span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-2-4"></span>$ mkdir ~/tutorial_ws
+<span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-3-4"></span>$ cd ~/tutorial_ws
+<span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-4-4"></span>$ catkin_init_workspace src
+<span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-5-4"></span>$ catkin_make</pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-10-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-11-3"></span><p class="line862">And now source the setup file from the result-space, so that packages you add to this workspace's <tt class="backtick">src</tt> folder will be findable by <a href="http://wiki.ros.org/rospack">rospack</a>, and the built binaries by <a href="http://wiki.ros.org/rosrun">rosrun</a> and <a href="http://wiki.ros.org/roslaunch">roslaunch</a>: <span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-12-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-13-3"></span></p><p class="line867"><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-14-3"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-15-3"></span></p><pre><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-1-8"></span>$ source devel/setup.bash</pre></div></div><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.line-53"></span><span class="anchor" id="ROS.2BAC8-Tutorials.2BAC8-SetupEnvironment.bottom"></span></div> <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867">
+</p><h2 id="Learning_tf">Learning tf</h2>
+<span class="anchor" id="line-8"></span><ul><li><p class="line891"><a href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf">Introduction to tf</a> <span class="anchor" id="line-9"></span></p></li></ul><div><table><tbody><tr>  <td style="width: 50%"><p class="line891"><strong>C++</strong> </p></td>
+  <td style="width: 50%"><p class="line862"> <strong>Python</strong></p></td>
+</tr>
+<tr>  <td style="width: 50%"><span class="anchor" id="line-10"></span><p class="line891"></p><ol><li><a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28C%2B%2B%29">Writing a tf broadcaster (C++)</a><p><span class="anchor" id="line-1-1"></span>This tutorial teaches you how to broadcast coordinate frames of a robot to tf. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20listener%20%28C%2B%2B%29">Writing a tf listener (C++)</a><p><span class="anchor" id="line-1-2"></span>This tutorial teaches you how to use tf to get access to frame transformations. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/Adding%20a%20frame%20%28C%2B%2B%29">Adding a frame (C++)</a><p><span class="anchor" id="line-1-3"></span>This tutorial teaches you how to add an extra fixed frame to tf. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/tf%20and%20Time%20%28C%2B%2B%29">Learning about tf and time (C++)</a><p><span class="anchor" id="line-1-4"></span>This tutorial teaches you to use the waitForTransform function to wait for a transform to be available on the tf tree. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/Time%20travel%20with%20tf%20%28C%2B%2B%29">Time travel with tf (C++)</a><p><span class="anchor" id="line-1-5"></span>This tutorial teaches you about advanced time travel features of tf </p></li></ol></td>
+  <td style="width: 50%"><p class="line891"></p><ol><li><a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28Python%29">Writing a tf broadcaster (Python)</a><p><span class="anchor" id="line-1-6"></span>This tutorial teaches you how to broadcast the state of a robot to tf. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20listener%20%28Python%29">Writing a tf listener (Python)</a><p><span class="anchor" id="line-1-7"></span>This tutorial teaches you how to use tf to get access to frame transformations. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/Adding%20a%20frame%20%28Python%29">Adding a frame (Python)</a><p><span class="anchor" id="line-1-8"></span>This tutorial teaches you how to add an extra fixed frame to tf. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/tf%20and%20Time%20%28Python%29">Learning about tf and time (Python)</a><p><span class="anchor" id="line-1-9"></span>This tutorial teaches you to use the waitForTransform function to wait for a transform to be available on the tf tree. </p></li><li><a href="http://wiki.ros.org/tf/Tutorials/Time%20travel%20with%20tf%20%28Python%29">Time travel with tf (Python)</a><p><span class="anchor" id="line-1-10"></span>This tutorial teaches you about advanced time travel features of tf </p></li></ol></td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line867"><strong>Now that you have completed these tutorials please take the time to complete this short <a class="http" href="http://spreadsheets.google.com/viewform?formkey=dHVTdXEwZU1QQ004TFBnbVh0MU9lLWc6MA..">questionnaire</a>.</strong> <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></p><p class="line867">
+</p><h2 id="Debugging_tf">Debugging tf</h2>
+<span class="anchor" id="line-15"></span><p class="line867"></p><div class="searchresults">
+<ol><li><a href="http://wiki.ros.org/tf/Tutorials/Debugging%20tf%20problems">Debugging tf problems</a><p><span class="anchor" id="line-1-11"></span>This tutorial gives a systematic approach for debugging tf related problems. </p></li></ol>
+</div><p class="line874"> <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></p><p class="line867">
+</p><h2 id="Using_sensor_messages_with_tf">Using sensor messages with tf</h2>
+<span class="anchor" id="line-19"></span><p class="line867"></p><ol><li><a href="http://wiki.ros.org/tf/Tutorials/Using%20Stamped%20datatypes%20with%20tf%3A%3AMessageFilter">Using Stamped datatypes with tf::MessageFilter</a><p><span class="anchor" id="line-1-12"></span>This tutorial describes how to use <a href="http://wiki.ros.org/tf">tf</a>::MessageFIlter to process Stamped datatypes. </p></li></ol><p class="line874"> <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span></p><p class="line867">
+</p><h2 id="Setting_up_your_robot_with_tf">Setting up your robot with tf</h2>
+<span class="anchor" id="line-22"></span><p class="line867"></p><ol><li><a href="http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF">Setting up your robot using tf</a><p><span class="anchor" id="line-1-13"></span>This tutorial provides a guide to set up your robot to start using tf. </p></li><li><a href="http://wiki.ros.org/robot_state_publisher/Tutorials/Using%20the%20robot%20state%20publisher%20on%20your%20own%20robot">Using the robot state publisher on your own robot</a><p><span class="anchor" id="line-1-14"></span>This tutorial explains how you can publish the state of your robot to <a href="http://wiki.ros.org/tf">tf</a>, using the robot state publisher. </p></li><li><a href="http://wiki.ros.org/urdf/Tutorials/Using%20urdf%20with%20robot_state_publisher">Using urdf with robot_state_publisher</a><p><span class="anchor" id="line-1-15"></span>This
+ tutorial gives a full example of a robot model with URDF that uses 
+robot_state_publisher. First, we create the URDF model with all the 
+necessary parts. Then we write a node which publishes the <a class="nonexistent" href="http://wiki.ros.org/JointState">JointState</a> and transforms. Finally, we run all the parts together. </p></li></ol><p class="line874"> <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span></p><p class="line867"><strong>Create a new tutorial:</strong> </p><form class="macro" method="POST" action="/tf/Tutorials"><div>
+<input name="action" value="newpage" type="hidden">
+<input name="parent" value="tf/Tutorials/" type="hidden">
+<input name="template" value="TutorialTemplate" type="hidden">
+<input name="nametemplate" value="%s" type="hidden">
+<input name="pagename" size="30" type="text">
+<input value="Enter tutorial name" type="submit">
+</div></form>  <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line867">
+</p><h2 id="Video_Tutorial_.28PR2_Beta_Workshop.29">Video Tutorial (PR2 Beta Workshop)</h2>
+<span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line867"></p><center><iframe type="text/html" src="http://www.youtube.com/embed/Ra-nXIfPWdg" allowfullscreen="" width="480" height="270" frameborder="0"></iframe></center> <span class="anchor" id="line-30"></span><center><iframe type="text/html" src="http://www.youtube.com/embed/Xf25dVrG5ks" allowfullscreen="" width="480" height="270" frameborder="0"></iframe></center> <span class="anchor" id="line-31"></span><center><iframe type="text/html" src="http://www.youtube.com/embed/EQTjA3mREZo" allowfullscreen="" width="480" height="270" frameborder="0"></iframe></center> <span class="anchor" id="line-32"></span><center><iframe type="text/html" src="http://www.youtube.com/embed/mCyOb1r2nH4" allowfullscreen="" width="480" height="270" frameborder="0"></iframe></center> <span class="anchor" id="line-33"></span><span class="anchor" id="bottom"></span></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="en">Wiki: tf/Tutorials  (last edited 2014-11-20 21:11:47 by <span title="ShokoofehPourmehr @ 24.114.29.146[24.114.29.146]"><a class="nonexistent" href="http://wiki.ros.org/ShokoofehPourmehr" title="ShokoofehPourmehr @ 24.114.29.146[24.114.29.146]">ShokoofehPourmehr</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="tf_Tutorials%20-%20ROS%20Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>

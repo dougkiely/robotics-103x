@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/bootstrap.css">
+<script type="text/javascript" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/4c8610d177"></script><script src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/nr-1026.js"></script><script type="text/javascript" async="" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/ga.js"></script><script src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/jquery-1.js"></script>
+<script src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/sorttable.js"></script>
+<script type="text/javascript" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/jquery.js"></script>                         
+<script type="text/javascript" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/seesaw.js"></script> 
+<script type="text/javascript" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGk1TG08=","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":383}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>tf/Tutorials/Introduction to tf - ROS Wiki</title>
+<script type="text/javascript" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=print">
+<link rel="Up" href="http://wiki.ros.org/tf/Tutorials">
+<link rel="Appendix" title="frames.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=frames.png">
+<link rel="Appendix" title="latex_986fed48f3e5bc349f7ca256812c18ebe46a588b_p1.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=latex_986fed48f3e5bc349f7ca256812c18ebe46a588b_p1.png">
+<link rel="Appendix" title="snapshot_rqt_tree_turtle_tf.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=snapshot_rqt_tree_turtle_tf.png">
+<link rel="Appendix" title="turtle_tf_drive.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=turtle_tf_drive.png">
+<link rel="Appendix" title="turtle_tf_moved.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=turtle_tf_moved.png">
+<link rel="Appendix" title="turtle_tf_rviz.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=turtle_tf_rviz.png">
+<link rel="Appendix" title="turtle_tf_start.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=turtle_tf_start.png">
+<link rel="Appendix" title="view_frames_2.png" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=view_frames_2.png">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="en">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+  
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable the alert box uncomment the block below. Change the alert_box_name to a new name. Then update the content below the button. -->
+<!-- Disabling alert box-->
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_lunar_teeshirt'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+ROS Lunar Loggerhead Tshirts and Hoodies are available worldwide! You can order from fulfillment centers in the <a href="https://teespring.com/ros-lunar-loggerhead">US</a> or <a href="https://teespring.com/ros-lunar-loggerhead-eu">Europe</a>.
+<br>
+Ordering closes May 9th!  And there are <a href="https://www.stickermule.com/user/1070828488/stickers">stickers too.</a>
+    </div>
+<!-- End disabling alert box -->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/ros_org.png" alt="ros.org" width="238" height="51" border="0"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td valign="middle" align="right">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" width="1024" height="53"><nobr><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_left.png" alt="" width="17" height="53"><a href="http://wiki.ros.org/"><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_documentation.png" alt="Documentation" width="237" height="53" border="0"></a><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/browse/"><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_browse_software.png" alt="Browse Software" width="268" height="53" border="0"></a><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/news"><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_news.png" alt="News" width="84" height="53" border="0"></a><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://wiki.ros.org/ROS/Installation"><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_download.png" alt="Download" width="151" height="53" border="0"></a><img src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/menu_right.png" width="60" height="53"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://wiki.ros.org/tf">tf</a></li><li><a href="http://wiki.ros.org/tf/Tutorials">Tutorials</a></li><li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/tf/Tutorials/Introduction%20to%20tf?action=fullsearch&amp;context=180&amp;value=linkto%3A%22tf%2FTutorials%2FIntroduction+to+tf%22" rel="nofollow" title="Click to do a full-text search for this title">Introduction to tf</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf">Introduction to tf</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/tf/Tutorials/Introduction%20to%20tf?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/tf/Tutorials/Introduction%20to%20tf?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/tf/Tutorials/Introduction%20to%20tf">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="disabled" class="disabled">Delete Cache</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Delete Page</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="disabled" class="disabled">Subscribe User</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Remove Spam</option>
+<option value="show" disabled="disabled" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/tf/Tutorials/Introduction%20to%20tf?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line867"><span class="anchor" id="line-1-1"></span><span class="anchor" id="line-2-1"></span></p><div><table><tbody><tr>  <td style="background-color: #cce0ff"><strong>Note:</strong> This tutorial assumes you have a working knowledge of compiling programs in ROS. Check out the <a href="http://wiki.ros.org/ROS/Tutorials">ROS tutorials</a> to learn how to do this. </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-3-1"></span><span class="anchor" id="line-4-1"></span><span class="anchor" id="line-5-1"></span><span class="anchor" id="line-6-1"></span><div><table><tbody><tr>  <td style="background-color: #bbceee"> <img alt="(!)" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/idea.png" title="(!)" width="15" height="15"> Please ask about problems and questions regarding this tutorial on <a class="http" href="http://answers.ros.org/">answers.ros.org</a>.
+ Don't forget to include in your question the link to this page, the 
+versions of your OS &amp; ROS, and also add appropriate tags.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-7-1"></span><span class="anchor" id="line-8-1"></span><span class="anchor" id="line-9-1"></span>
+<h1 id="Introduction_to_tf">Introduction to tf</h1>
+<span class="anchor" id="line-10-1"></span><strong>Description:</strong>
+ This tutorial will give you a good idea of what tf can do for you. It 
+shows off some of the tf power in a multi-robot example using <a href="http://wiki.ros.org/turtlesim">turtlesim</a>. This also introduces using <a href="http://wiki.ros.org/tf#tf_echo">tf_echo</a>, <a href="http://wiki.ros.org/tf#view_frames">view_frames</a>, <a href="http://wiki.ros.org/rqt_tf_tree">rqt_tf_tree</a>, and <a href="http://wiki.ros.org/rviz">rviz</a>.<br>
+<br>
+ <span class="anchor" id="line-11-1"></span><span class="anchor" id="line-12-1"></span><span class="anchor" id="line-13-1"></span><strong>Keywords:</strong> transforms, coordinate frames<br>
+<br>
+ <span class="anchor" id="line-14-1"></span><span class="anchor" id="line-15-1"></span><span class="anchor" id="line-16-1"></span><strong>Tutorial Level:</strong> BEGINNER<br>
+ <br>
+ <span class="anchor" id="line-17-1"></span><span class="anchor" id="line-18-1"></span><strong>Next Tutorial:</strong> Writing a tf broadcaster  <a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28Python%29">(Python)</a> <a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28C%2B%2B%29">(C++)</a><br>
+ <br>
+  <span class="anchor" id="line-19-1"></span><p class="line874"> <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span></p><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="#Set_Up_the_Demo">Set Up the Demo</a></li><li>
+<a href="#Running_the_Demo">Running the Demo</a></li><li>
+<a href="#What_is_Happening">What is Happening</a></li><li>
+<a href="#tf_Tools">tf Tools</a><ol><li>
+<a href="#Using_view_frames">Using view_frames</a></li><li>
+<a href="#Using_rqt_tf_tree">Using rqt_tf_tree</a></li><li>
+<a href="#Using_tf_echo">Using tf_echo</a></li></ol></li><li>
+<a href="#rviz_and_tf">rviz and tf</a></li></ol></div><p class="line874"> <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span></p><p class="line862">Select which version of this tutorial you want: <span id="rosversion_selector" class="btn-group">
+<button id="electric" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'electric'], hide:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'electric'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> electric </button>
+<button id="fuerte" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'fuerte'], hide:['fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'electric', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'fuerte'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> fuerte </button>
+<button id="groovy" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'groovy'], hide:['groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'electric', 'fuerte', 'hydro', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'groovy'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> groovy </button>
+<button id="hydro" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'hydro'], hide:['hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'electric', 'fuerte', 'groovy', 'indigo', 'jade', 'kinetic', 'lunar'], target_ros_distro:'hydro'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> hydro </button>
+<button id="indigo" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'indigo'], hide:['indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'jade', 'kinetic', 'lunar'], target_ros_distro:'indigo'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(62, 79, 110) none repeat scroll 0% 0%; color: rgb(230, 230, 230);"> indigo </button>
+<button id="jade" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'jade'], hide:['jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'kinetic', 'lunar'], target_ros_distro:'jade'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> jade </button>
+<button id="kinetic" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'kinetic_and_older', 'lunar_and_older', 'kinetic'], hide:['kinetic_and_newer', 'lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'lunar'], target_ros_distro:'kinetic'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('lunar').style.background='#e6e6e6';document.getElementById('lunar').style.color='#3e4f6e';return false" style="color: rgb(62, 79, 110); background: rgb(230, 230, 230) none repeat scroll 0% 0%;"> kinetic </button>
+<button id="lunar" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'kinetic_and_newer', 'lunar_and_newer', 'lunar_and_older', 'lunar'], hide:['lunar_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'kinetic_and_older', 'lunar_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade', 'kinetic'], target_ros_distro:'lunar'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> lunar </button>
+</span> <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span></p><p class="line862">Select which buildsystem you are using: <script type="text/javascript">
+<!--
+// @@ Buildsystem macro
+function Buildsystem(sections) {
+    var dotversion = ".buildsystem."
+
+    // Tag shows unless already tagged
+    $.each(sections.show,
+        function() {
+            $("div" + dotversion + this).not(".versionshow,.versionhide").addClass("versionshow")
+        }
+    )
+
+    // Tag hides unless already tagged
+    $.each(sections.hide,
+        function() {
+            $("div" + dotversion + this).not(".versionshow,.versionhide").addClass("versionhide")
+        }
+    )
+
+      // Show or hide according to tag
+      $(".versionshow").removeClass("versionshow").filter("div").show()
+      $(".versionhide").removeClass("versionhide").filter("div").hide()
+}
+
+function getURLParameter(name) {
+    return decodeURIComponent(
+        (
+            new RegExp(
+                '[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)'
+            ).exec(location.search) || [,""]
+        )[1].replace(/\+/g, '%20')
+    ) || null;
+}
+
+$(document).ready(function() {
+    var activesystem = "catkin";
+    var url_distro = getURLParameter('buildsystem');
+    if (url_distro)
+    {
+        activesystem = url_distro;
+    }
+    $("div.buildsystem").not("."+activesystem).hide();
+    $("#"+activesystem).click();
+    $("input.version:hidden").each(function() {
+        var bg = $(this).attr("value").split(":");
+        $("div.version." + bg[0]).css("background-color", bg[1]).removeClass(bg[0])
+    });
+})
+ // -->
+</script>
+<span class="btn-group">
+<button id="catkin" class="btn btn-default" onclick="Buildsystem({show:['catkin'], hide:['rosbuild']});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('rosbuild').style.background='#e6e6e6';document.getElementById('rosbuild').style.color='#3e4f6e';return false" style="color: rgb(230, 230, 230); background: rgb(62, 79, 110) none repeat scroll 0% 0%;"> catkin </button>
+<button id="rosbuild" class="btn btn-default" onclick="Buildsystem({show:['rosbuild'], hide:['catkin']});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('catkin').style.background='#e6e6e6';document.getElementById('catkin').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> rosbuild </button>
+</span> <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span></p><p class="line867">
+</p><h2 id="Set_Up_the_Demo">Set Up the Demo</h2>
+<span class="anchor" id="line-30"></span><p class="line867"><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span></p><div class="buildsystem catkin"><span class="anchor" id="line-1-2"></span><p class="line874">The nodes for this tutorial are released for Ubuntu, so go ahead and install them: <span class="anchor" id="line-2-2"></span><span class="anchor" id="line-3-2"></span></p><p class="line867"><span class="anchor" id="line-4-2"></span><span class="anchor" id="line-5-2"></span></p><pre><span class="anchor" id="line-1-3"></span>$ sudo apt-get install ros-<span class="rosversion_name">indigo</span>-ros-tutorials ros-<span class="rosversion_name">indigo</span>-geometry-tutorials ros-<span class="rosversion_name">indigo</span>-rviz ros-<span class="rosversion_name">indigo</span>-rosbash ros-<span class="rosversion_name">indigo</span>-rqt-tf-tree</pre></div><span class="anchor" id="line-37"></span><p class="line867"><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p><div class="buildsystem rosbuild" style="display: none;"><span class="anchor" id="line-1-4"></span><p class="line874">Let's start by getting any necessary packages and dependencies and compiling the demo package. <span class="anchor" id="line-2-3"></span><span class="anchor" id="line-3-3"></span></p><p class="line867"><span class="anchor" id="line-4-3"></span><span class="anchor" id="line-5-3"></span><span class="anchor" id="line-6-2"></span><span class="anchor" id="line-7-2"></span></p><pre><span class="anchor" id="line-1-5"></span>$ sudo apt-get install ros-<span class="rosversion_name">indigo</span>-geometry-tutorials 
+<span class="anchor" id="line-2-4"></span>$ rosdep install turtle_tf rviz
+<span class="anchor" id="line-3-4"></span>$ rosmake turtle_tf rviz</pre></div><span class="anchor" id="line-46"></span><p class="line867">
+</p><h2 id="Running_the_Demo">Running the Demo</h2>
+<span class="anchor" id="line-47"></span><p class="line874">Now that we're done getting the turtle_tf tutorial package, let's run the demo. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p><p class="line867"><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span></p><pre><span class="anchor" id="line-1-6"></span>$ roslaunch turtle_tf turtle_tf_demo.launch</pre><span class="anchor" id="line-52"></span><p class="line874">You will see the turtlesim start with two turtles. <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span></p><ul><li style="list-style-type:none"><p class="line891"><img alt="turtle_tf_start.png" class="attachment" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/Introduction%252520to%252520tf_006.png" title="turtle_tf_start.png"> <span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span></p></li></ul><p class="line862">(in case you experience that a process dies, a <a class="http" href="http://answers.ros.org/question/45251/turtle_pointer-6-process-has-died-when-running-tf-tutorial/">workaround is available</a>.) <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span></p><p class="line862">Once the turtlesim is started you can drive the center turtle around in the turtlesim using the keyboard arrow keys, <strong>select the roslaunch terminal window</strong> so that your keystrokes will be captured to drive the turtle. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span></p><ul><li style="list-style-type:none"><p class="line891"><img alt="turtle_tf_drive.png" class="attachment" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/Introduction%2520to%2520tf.png" title="turtle_tf_drive.png"> <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span></p></li></ul><p class="line874">As you can see that one turtle will continuously move to follow the turtle you are driving around. <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span></p><p class="line867">
+</p><h2 id="What_is_Happening">What is Happening</h2>
+<span class="anchor" id="line-65"></span><p class="line862">This demo is
+ using the tf library to create three coordinate frames: a world frame, a
+ turtle1 frame, and a turtle2 frame. This tutorial uses a <strong>tf broadcaster</strong> to publish the turtle coordinate frames and a <strong>tf listener</strong> to compute the difference in the turtle frames and move one turtle to follow the other. <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span></p><p class="line867">
+</p><h2 id="tf_Tools">tf Tools</h2>
+<span class="anchor" id="line-68"></span><p class="line874">Now let's look at how tf is being used to create this demo. We can use tf tools to look at what tf is doing behind the scenes. <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span></p><p class="line867">
+</p><h3 id="Using_view_frames">Using view_frames</h3>
+<span class="anchor" id="line-71"></span><p class="line867"><tt class="backtick">view_frames</tt> creates a diagram of the frames being broadcast by tf over ROS. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span></p><pre><span class="anchor" id="line-1-7"></span>$ rosrun tf view_frames</pre><span class="anchor" id="line-75"></span><p class="line874">You will see: <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><pre><span class="anchor" id="line-1-8"></span>Transform Listener initing
+<span class="anchor" id="line-2-5"></span>Listening to /tf for 5.000000 seconds
+<span class="anchor" id="line-3-5"></span>Done Listening
+<span class="anchor" id="line-4-4"></span>dot - Graphviz version 2.16 (Fri Feb  8 12:52:03 UTC 2008)
+<span class="anchor" id="line-5-4"></span>
+<span class="anchor" id="line-6-3"></span>Detected dot version 2.16
+<span class="anchor" id="line-7-3"></span>frames.pdf generated</pre><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span></li></ul><p class="line874">Here
+ a tf listener is listening to the frames that are being broadcast over 
+ROS and drawing a tree of how the frames are connected. To view the 
+tree: <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span></p><p class="line867"><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></p><pre><span class="anchor" id="line-1-9"></span>$ evince frames.pdf</pre><span class="anchor" id="line-92"></span><ul><li style="list-style-type:none"><p class="line891"><img alt="view_frames_2.png" class="attachment" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/Introduction%252520to%252520tf_003.png" title="view_frames_2.png" width="605px" height="416px"> <span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span></p></li></ul><p class="line862">Here we can see the three frames that are broadcast by tf: the world, turtle1, and turtle2. We can also see that <tt class="backtick">world</tt> is the parent of the turtle1 and turtle2 frames. For debugging purposes, <tt class="backtick">view_frames</tt>
+ also reports some diagnostic information about when the oldest and most
+ recent frame transforms were received and how fast the tf frame is 
+published to tf. <span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span></p><p class="line867">
+</p><h3 id="Using_rqt_tf_tree">Using rqt_tf_tree</h3>
+<span class="anchor" id="line-97"></span><p class="line867"><a href="http://wiki.ros.org/rqt_tf_tree">rqt_tf_tree</a>
+ is a runtime tool for visualizing the tree of frames being broadcast 
+over ROS. You can refresh the tree simply by the refresh bottom in the 
+top-left corner of the diagram. <span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span></p><p class="line874">Usage: <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span></p><p class="line867"><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span></p><pre><span class="anchor" id="line-1-10"></span>rosrun rqt_tf_tree rqt_tf_tree</pre><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><p class="line874">Or simply: <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span></p><pre><span class="anchor" id="line-1-11"></span>rqt &amp;</pre><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><p class="line862">Then choose <a href="http://wiki.ros.org/rqt_tf_tree">rqt_tf_tree</a> from <tt class="backtick">Plugins</tt> tab. <span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span></p><ul><li style="list-style-type:none"><p class="line891"><img alt="snapshot_rqt_tree_turtle_tf.png" class="attachment" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/Introduction%252520to%252520tf_002.png" title="snapshot_rqt_tree_turtle_tf.png" width="605px" height="416px"> <span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span></p></li></ul><p class="line867">
+</p><h3 id="Using_tf_echo">Using tf_echo</h3>
+<span class="anchor" id="line-115"></span><p class="line867"><tt class="backtick">tf_echo</tt> reports the transform between any two frames broadcast over ROS. <span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span></p><p class="line874">Usage: <span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span></p><p class="line867"><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span></p><pre><span class="anchor" id="line-1-12"></span>rosrun tf tf_echo [reference_frame] [target_frame]</pre><span class="anchor" id="line-122"></span><p class="line862">Let's look at the transform of the turtle2 frame with respect to turtle1 frame which is equivalent to <script type="text/javascript" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/ASCIIMathML.js"></script><img alt="\large{$$\mathbf{T}_{turtle1\_turtle2} =\mathbf{T}_{turtle1\_world} *\mathbf{T}_{world\_turtle2}$$}" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/Introduction%252520to%252520tf_005.png" title="\large{$$\mathbf{T}_{turtle1\_turtle2} =\mathbf{T}_{turtle1\_world} *\mathbf{T}_{world\_turtle2}$$}" align="absmiddle"> : <span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span></p><p class="line867"><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span></p><pre><span class="anchor" id="line-1-13"></span>$ rosrun tf tf_echo turtle1 turtle2</pre><span class="anchor" id="line-127"></span><p class="line862">You will see the transform displayed as the <tt class="backtick">tf_echo</tt> listener receives the frames broadcast over ROS. <span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><pre><span class="anchor" id="line-1-14"></span>At time 1416409795.450
+<span class="anchor" id="line-2-6"></span>- Translation: [0.000, 0.000, 0.000]
+<span class="anchor" id="line-3-6"></span>- Rotation: in Quaternion [0.000, 0.000, 0.914, 0.405]
+<span class="anchor" id="line-4-5"></span>            in RPY [0.000, -0.000, 2.308]
+<span class="anchor" id="line-5-5"></span>At time 1416409796.441
+<span class="anchor" id="line-6-4"></span>- Translation: [0.000, 0.000, 0.000]
+<span class="anchor" id="line-7-4"></span>- Rotation: in Quaternion [0.000, 0.000, 0.914, 0.405]
+<span class="anchor" id="line-8-2"></span>            in RPY [0.000, -0.000, 2.308]
+<span class="anchor" id="line-9-2"></span>At time 1416409797.450
+<span class="anchor" id="line-10-2"></span>- Translation: [0.000, 0.000, 0.000]
+<span class="anchor" id="line-11-2"></span>- Rotation: in Quaternion [0.000, 0.000, 0.914, 0.405]
+<span class="anchor" id="line-12-2"></span>            in RPY [0.000, -0.000, 2.308]
+<span class="anchor" id="line-13-2"></span>At time 1416409798.441
+<span class="anchor" id="line-14-2"></span>- Translation: [0.000, 0.000, 0.000]
+<span class="anchor" id="line-15-2"></span>- Rotation: in Quaternion [0.000, 0.000, 0.914, 0.405]
+<span class="anchor" id="line-16-2"></span>            in RPY [0.000, -0.000, 2.308]
+<span class="anchor" id="line-17-2"></span>At time 1416409799.433
+<span class="anchor" id="line-18-2"></span>- Translation: [0.000, 0.000, 0.000]
+<span class="anchor" id="line-19-2"></span>- Rotation: in Quaternion [0.000, 0.000, 0.691, 0.723]
+<span class="anchor" id="line-20-1"></span>            in RPY [0.000, -0.000, 1.526]</pre><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span></li></ul><p class="line874">As you drive your turtle around you will see the transform change as the two turtles move relative to each other. <span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span></p><p class="line867">
+</p><h2 id="rviz_and_tf">rviz and tf</h2>
+<span class="anchor" id="line-155"></span><p class="line867"><a href="http://wiki.ros.org/rviz">rviz</a> is a visualization tool that is useful for examining tf frames. Let's look at our turtle frames using <tt class="backtick">rviz</tt>. Let's start <tt class="backtick">rviz</tt> with the turtle_tf configuration file using the <tt class="backtick">-d</tt> option for <tt class="backtick">rviz</tt>: <span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span></p><p class="line867"><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span></p><div class="version groovy_and_newer" style="display: block;"><span class="anchor" id="line-1-15"></span><p class="line867"><span class="anchor" id="line-2-7"></span><span class="anchor" id="line-3-7"></span></p><pre><span class="anchor" id="line-1-16"></span>$ rosrun rviz rviz -d `rospack find turtle_tf`/rviz/turtle_rviz.rviz</pre></div><span class="anchor" id="line-162"></span><p class="line867"><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span></p><div class="version electric fuerte" style="display: none;"><span class="anchor" id="line-1-17"></span><p class="line867"><span class="anchor" id="line-2-8"></span><span class="anchor" id="line-3-8"></span></p><pre><span class="anchor" id="line-1-18"></span>$ rosrun rviz rviz -d `rospack find turtle_tf`/rviz/turtle_rviz.vcg</pre></div><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><p class="line867"><a class="attachment" href="http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf?action=AttachFile&amp;do=view&amp;target=turtle_tf_rviz.png" title="{{attachment:turtle_tf_rviz.png|attachment:turtle_tf_rviz.png|width=&quot;100%&quot;}}"><img alt="attachment:turtle_tf_rviz.png" class="attachment" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/Introduction%252520to%252520tf_004.png" title="attachment:turtle_tf_rviz.png" width="100%"></a> <span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span></p><p class="line874">In the side bar you will see the frames broadcast by tf. As you drive the turtle around you will see the frames move in rviz. <span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span></p><p class="line862">Now that we have examined the turtle_tf_demo, let's look at how to write the broadcaster <a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28Python%29">(Python)</a> <a href="http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28C%2B%2B%29">(C++)</a> for this demo. <span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span></p><p class="line867"><span class="anchor" id="line-175"></span></p><p class="line867"><span class="anchor" id="line-176"></span></p><p class="line867"><span class="anchor" id="line-177"></span></p><p class="line867"><span class="anchor" id="line-178"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="en">Wiki: tf/Tutorials/Introduction to tf  (last edited 2015-06-24 18:40:19 by <span title="hugomatic @ 70-35-50-58.static.wiline.com[70.35.50.58]"><a class="nonexistent" href="http://wiki.ros.org/hugomatic" title="hugomatic @ 70-35-50-58.static.wiline.com[70.35.50.58]">hugomatic</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="tf_Tutorials_Introduction%20to%20tf%20-%20ROS%20Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>
